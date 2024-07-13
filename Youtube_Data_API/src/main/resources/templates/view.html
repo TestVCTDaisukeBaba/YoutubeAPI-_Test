@@ -1,0 +1,22 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+</head>
+<body>
+	<table border="1" class="nara-table" style="table-layout: fixed;">
+		<thead>
+			<tr>
+				<th style="background:#AD002D;font-weight: bold;color:#fff;">動画のタイトル</th>
+				<th style="background:#AD002D;font-weight: bold;color:#fff;">サムネイル</th>
+			</tr>
+		</thead>
+		<th:block th:each="v : ${video}">
+			<tbody>
+			  	<tr>
+				    <td th:text="${v.videoTitle}"></td>
+				    <td><img th:src="@{${v.thumbnail}}" /></td>
+			  	</tr>
+			  </tbody>
+		</th:block>
+	</table>
+</body>
+</html>
